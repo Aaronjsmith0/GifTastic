@@ -1,0 +1,58 @@
+#header {
+	background-image: url("../images/bg.jpg");
+	color: red;
+	text-align: center;
+	height: 170px;
+	width: 100%;
+	margin: auto 0;
+}
+
+#wholeThing {
+	background-color: black;
+}
+
+#subtitle {
+	font-size: 40px;
+	color: red;
+	text-align: center;
+}
+
+#buttons {
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: red;
+	border-color: blue;
+	border-width: 5px;
+	color: white;
+	font-size: 20px;
+	align-content: center
+}
+
+#gifSearch {
+	margin: 0 auto;
+	text-align: center;
+	color: blue;
+	font-size: 20px;
+}
+
+#addGIF {
+	background-color: red;
+}
+
+#gifArea {
+	clear: both;
+	display: inline;
+}
+
+.themeGiphy {
+	padding: 2px;
+	width: 350px;
+	height: 200px;
+}
+
+.rating {
+	color: red;
+	font-size: 15px;
+}
