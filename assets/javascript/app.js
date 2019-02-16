@@ -1,22 +1,14 @@
 $(document).ready(function () {
-
     var topics = [];
 
     function displayGIF() {
-
         var gifs = $(this).data("search");
-        console.log(gifs);
-
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifs + "&api_key=fzllleNYXiQPRkOHwxgK8Ryi2e9fJOid&limit=10";
-
-        console.log(queryURL);
-
         $.ajax({
             url: queryURL,
             method: "GET"
         }).done(function (response) {
             var results = response.data;
-            console.log(results);
             for (var i = 0; i < results.length; i++) {
                 var showDiv = $("<div class='col-md-4'>");
                 var rating = results[i].rating;
@@ -45,7 +37,6 @@ $(document).ready(function () {
         event.preventDefault();
         var newGIF = $("#searchInput").val().trim();
         topics.push(newGIF);
-        console.log(topics);
         $("#searchInput").val('');
         displayButtons();
     });
@@ -60,12 +51,8 @@ $(document).ready(function () {
             $("#myButtons").append(a);
         }
     }
-
-
     displayButtons();
-
     $(document).on("click", "#buttons", displayGIF);
-
     $(document).on("click", ".themeGiphy", pausePlayGifs);
 
     function pausePlayGifs() {
@@ -78,5 +65,4 @@ $(document).ready(function () {
             $(this).attr("data-state", "still");
         }
     }
-
 });
